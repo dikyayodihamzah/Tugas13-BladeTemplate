@@ -12,11 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('items.index');
 });
 
-Route::get('/home', 'HomeController@home');
+Route::get('/data-tables', function () {
+    return view('items.data_tables');
+});
 
-Route::get('/register', 'AuthController@register');
+// Route::get('/home', 'HomeController@home');
 
-Route::post('/welcome', 'AuthController@welcome');
+// Route::get('/register', 'AuthController@register');
+
+// Route::post('/welcome', 'AuthController@welcome');
+
+// Route::get('/master', function() {
+//     return view('items.master');
+// });
+
+// Route::get('/items', function() {
+//     return view('items.index');
+// });
