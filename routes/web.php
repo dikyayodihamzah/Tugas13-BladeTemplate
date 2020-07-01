@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/test/{x}', function ($angka) {
-    return view('test', ["num" => $angka]);
-});
+Route::get('/home', 'HomeController@home');
+
+Route::get('/register', 'AuthController@register');
+
+Route::post('/welcome', 'AuthController@welcome');
